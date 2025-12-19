@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+main {
+  max-width: 900px;
+  margin: 80px auto 0;
+  padding: 1rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.avatar-fallback {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #666;
+}
+
+/* MODAL */
+.avatar-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.avatar-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.navbar nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: 0.2s;
+  font-size: 1rem;
+}
+
+.navbar nav a:hover {
+  text-shadow: 0px 0px 8px #fff;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.center {
+  text-align: center;
+}
+
+.card img {
+  margin-bottom: 1rem;
+}
+
+.card-about {
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.avatar-large {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #0a66c2;
+}
+
+.linkedin-icon {
+  width: 70px;
+  height: 20px;
+  cursor: pointer;
+  box-shadow: 0px 0px 4px #333;
+  margin-top: 10px;
+  transition: 0.3s;
+  border: 2px solid #0a66c2;
+  border-radius: 5px;
+}
+
+.card-about .linkedin-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 8px #0a66c2;
+}
+
+/* Estados */
+.loading {
+  font-style: italic;
+}
+
+.error {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* ============================= */
+/* 📱 MOBILE (até 600px) */
+/* ============================= */
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-left {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navbar a {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* ============================= */
+/* 📲 TABLET (601px até 1024px) */
+/* ============================= */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .navbar a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+  }
+}
