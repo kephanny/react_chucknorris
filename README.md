@@ -35,7 +35,7 @@ Siga os passos abaixo para rodar o projeto em sua máquina:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/SEU_USUARIO/react_chucknorris.git
+git clone https://github.com/kephanny/react_chucknorris.git
 ```
 
 ### Acesse a pasta do projeto
